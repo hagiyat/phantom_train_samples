@@ -6,6 +6,9 @@ config :phantom_train, :subscriber,
   module: PhantomTrain.Subscriber.SystemCommand,
   command: "redis-cli monitor"
 
+config :phantom_train, :deliverer,
+  module: PhantomTrain.Deliverer.RegexFilter
+
 config :phantom_train, :stores,
   [
     [
